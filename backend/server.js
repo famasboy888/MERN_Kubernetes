@@ -24,7 +24,8 @@ app.use((request, response, next) => {
 app.use('/api/workouts', workoutRoutes);
 
 app.listen(4000, () => {
-    console.log('listening for requests on port 4000')
+    console.log('listening for requests on port 4000');
+    console.log(mongo_uri);
 })
 
 
