@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-server-backend
+spec:
+  selector:
+    matchLabels:
+      app: data-server
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: data-server
+        tier: backend
+        track: stable
+    spec:
+      containers:
+      - name: data-server
+        image: famasboy888/react-data-server:0.0.2.KUBE
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80

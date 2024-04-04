@@ -4,6 +4,8 @@ const express = require('express');
 const workoutRoutes = require('./routes/workoutRouter');
 const mongoose = require('mongoose');
 
+const mongo_uri = "mongodb+srv://"+process.env.MONGO_USER+":"+process.env.MONGO_PASS+process.env.MONGO_API
+
 const app = express();
 
 // Allow to get post Request body
@@ -19,10 +21,10 @@ app.use((request, response, next) => {
 app.use('/api/workouts', workoutRoutes);
 
 // Connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(mongo_uri)
     .then(() => {
         app.listen(process.env.PORT, () => {
-            console.log("Listening to port 4000...ss.");
+            console.log("Listening to port 80.");
         });
     })
     .catch((e) => {

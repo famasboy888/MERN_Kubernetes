@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-webapp-frontend
+spec:
+  selector:
+    matchLabels:
+      app: react-webapp
+      tier: frontend
+      track: stable
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: react-webapp
+        tier: frontend
+        track: stable
+    spec:
+      containers:
+      - name: react-webapp
+        image: famasboy888/react-webapp:0.0.3.KUBE
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
