@@ -11,25 +11,23 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send("I am endpoint: 1")
+// Allow to get post Request body
+app.use(express.json());
+
+// Adding a middle ware
+app.use((request, response, next) => {
+    console.log(request.path, request.method);
+    next();
 })
+
+//Routes
+app.use('/api/workouts', workoutRoutes);
 
 app.listen(4000, () => {
-console.log('listening for requests on port 4000')
+    console.log('listening for requests on port 4000')
 })
 
-// // Allow to get post Request body
-// app.use(express.json());
 
-// // Adding a middle ware
-// app.use((request, response, next) => {
-//     console.log(request.path, request.method);
-//     next();
-// })
-
-// //Routes
-// app.use('/api/workouts', workoutRoutes);
 
 // // Connect to db
 // mongoose.connect(mongo_uri)
