@@ -1,4 +1,5 @@
 {
+  "proxy": "http://node-server-service:80",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
