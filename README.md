@@ -9,4 +9,4 @@ Web Application consists of the following tools: `ReactJs` + `NodeJs` + `Express
 
 or go inside the shell
 
-`kubectl exec --stdin --tty shell-demo -- /bin/bash`
+`kubectl exec <pod-name> -i --tty -- sh`
