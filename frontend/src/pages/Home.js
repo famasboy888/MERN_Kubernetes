@@ -8,7 +8,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchWorkouts = async () => {
-            const response = await fetch('/api/workouts');
+            const response = await fetch(process.env.REACT_APP_API_URL+'/api/workouts');
             const jsonParse = await response.json();
 
             if (response.ok) {
@@ -22,7 +22,6 @@ const Home = () => {
 
     return (
         <div className="home">
-            <p>{process.env.PORT}</p>
             <div className="workouts">
                 {workouts && workouts.map((workout) => (
                     <WorkoutDetails key={workout._id} workout={workout} />
