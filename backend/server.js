@@ -24,7 +24,7 @@ app.use('/api/workouts', workoutRoutes);
 mongoose.connect(mongo_uri)
     .then(() => {
         app.listen(process.env.PORT, () => {
-            console.log("Listening to port 80.");
+            console.log("Listening to port 4000.");
         });
     })
     .catch((e) => {
