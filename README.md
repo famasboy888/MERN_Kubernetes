@@ -6,6 +6,13 @@ Web Application consists of the following tools: `ReactJs` + `NodeJs` + `Express
   <img width="50%" height="50%" src="https://github.com/famasboy888/MERN_Kubernetes/assets/23441168/86f7a561-85c5-4e03-abdb-430126747c14">
 </p>
 
+<hr>
+
+## Front-end display while checking inserted data in MongoDB
+
+<p align="center">
+   <img width="50%" height="50%" src="https://github.com/famasboy888/MERN_Kubernetes/assets/23441168/6790da66-19e4-438c-a63b-bd92ef19de0c">
+</p>
 
 ## Debugging Pods
 
