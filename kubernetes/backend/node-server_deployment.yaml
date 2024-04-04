@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: data-server-backend
+  name: node-server-backend
 spec:
   selector:
     matchLabels:
-      app: data-server
+      app: node-server
       tier: backend
       track: stable
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
-        app: data-server
+        app: node-server
         tier: backend
         track: stable
     spec:
       containers:
-      - name: data-server
-        image: famasboy888/react-data-server:0.0.2.KUBE
+      - name: node-server
+        image: famasboy888/node-server:0.0.1.RELEASE
         imagePullPolicy: Always
         ports:
         - name: http

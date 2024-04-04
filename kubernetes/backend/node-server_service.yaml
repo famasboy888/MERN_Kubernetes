@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: data-server
+  name: node-server-service
 spec:
   selector:
-    app: data-server
+    app: node-server
     tier: backend
   ports:
     - protocol: TCP
