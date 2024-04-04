@@ -8,6 +8,14 @@ Web Application consists of the following tools: `ReactJs` + `NodeJs` + `Express
 
 <hr>
 
+## Deploying in Kubernetes cluster
+
+<p align="center">
+   <img width="65%" height="65%" src="https://github.com/famasboy888/MERN_Kubernetes/assets/23441168/443cdc55-fb04-4fd9-b9c1-27c7c6d92c36">
+</p>
+
+
+
 ## Front-end display while checking inserted data in MongoDB
 
 <p align="center">
