@@ -11,7 +11,11 @@ Web Application consists of the following tools: `ReactJs` + `NodeJs` + `Express
 ## Deploying in Kubernetes cluster
 
 <p align="center">
-   <img width="65%" height="65%" src="https://github.com/famasboy888/MERN_Kubernetes/assets/23441168/443cdc55-fb04-4fd9-b9c1-27c7c6d92c36">
+   <img width="40%" height="40%" src="https://github.com/famasboy888/MERN_Kubernetes/assets/23441168/443cdc55-fb04-4fd9-b9c1-27c7c6d92c36">
+</p>
+
+<p align="center">
+   <img width="40%" height="40%" src="https://github.com/famasboy888/MERN_Kubernetes/assets/23441168/0130201e-546f-4260-85ab-12670327e4d7">
 </p>
 
 
