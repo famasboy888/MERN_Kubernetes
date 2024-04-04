@@ -3,10 +3,13 @@ require('dotenv').config();
 const express = require('express');
 const workoutRoutes = require('./routes/workoutRouter');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const mongo_uri = "mongodb+srv://"+process.env.MONGO_USER+":"+process.env.MONGO_PASS+process.env.MONGO_API
 
 const app = express();
+
+app.use(cors());
 
 // Allow to get post Request body
 app.use(express.json());
