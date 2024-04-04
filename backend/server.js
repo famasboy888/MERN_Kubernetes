@@ -11,28 +11,36 @@ const app = express();
 
 app.use(cors());
 
-// Allow to get post Request body
-app.use(express.json());
-
-// Adding a middle ware
-app.use((request, response, next) => {
-    console.log(request.path, request.method);
-    next();
+app.get('/', (req, res) => {
+    res.send("I am endpoint: 1")
 })
 
-//Routes
-app.use('/api/workouts', workoutRoutes);
+app.listen(4000, () => {
+console.log('listening for requests on port 4000')
+})
 
-// Connect to db
-mongoose.connect(mongo_uri)
-    .then(() => {
-        app.listen(process.env.PORT, () => {
-            console.log("Listening to port 4000.");
-        });
-    })
-    .catch((e) => {
-        console.log(e);
-    });
+// // Allow to get post Request body
+// app.use(express.json());
+
+// // Adding a middle ware
+// app.use((request, response, next) => {
+//     console.log(request.path, request.method);
+//     next();
+// })
+
+// //Routes
+// app.use('/api/workouts', workoutRoutes);
+
+// // Connect to db
+// mongoose.connect(mongo_uri)
+//     .then(() => {
+//         app.listen(process.env.PORT, () => {
+//             console.log("Listening to port 4000.");
+//         });
+//     })
+//     .catch((e) => {
+//         console.log(e);
+//     });
 
 
 
